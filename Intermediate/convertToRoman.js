@@ -1,3 +1,30 @@
+function convertToRoman(num) {
+	romanNumber = ""
+	var digits = (""+num).split("");
+	if(digits.length==1){
+		unidade.call(digits[0])
+		return romanNumber
+	}
+	else if(digits.length==2){
+		dezena.call(digits[0]);
+		unidade.call(digits[1]);
+		return romanNumber;
+	}
+	else if(digits.length==3){
+		centena.call(digits[0])
+		dezena.call(digits[1])
+		unidade.call(digits[2])
+		return romanNumber
+	}
+	else if(digits.length==4){
+		milhares.call(digits[0]);
+		centena.call(digits[1]);
+		dezena.call(digits[2]);
+		unidade.call(digits[3]);
+		return romanNumber
+	}
+}
+
 function unidade(){
 	console.log(this)
 	if(this<4){
@@ -110,31 +137,6 @@ function milhares(){
 	}
 }
 
-function convertToRoman(num) {
-	romanNumber = ""
-	var digits = (""+num).split("");
-	if(digits.length==1){
-		unidade.call(digits[0])
-		return romanNumber
-	}
-	else if(digits.length==2){
-		dezena.call(digits[0]);
-		unidade.call(digits[1]);
-		return romanNumber;
-	}
-	else if(digits.length==3){
-		centena.call(digits[0])
-		dezena.call(digits[1])
-		unidade.call(digits[2])
-		return romanNumber
-	}
-	else if(digits.length==4){
-		milhares.call(digits[0]);
-		centena.call(digits[1]);
-		dezena.call(digits[2]);
-		unidade.call(digits[3]);
-		return romanNumber
-	}
-}
+
 
 convertToRoman(68);

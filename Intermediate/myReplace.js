@@ -1,5 +1,14 @@
 function myReplace(str, before, after) {
-  return str;
+	if(before[0]==before[0].toUpperCase()){
+      var newAfter = after.replace(after[0],after[0].toUpperCase());
+      var newStr = str.replace(before,newAfter)
+      console.log(newStr)
+      return newStr
+	}
+    else{
+	var newStr = str.replace(before,after)
+  	return newStr;
+    }
 }
 
-myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+myReplace("He is Sleeping on the couch", "Sleeping", "sitting")

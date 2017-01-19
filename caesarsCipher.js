@@ -15,7 +15,7 @@ function rot13(str) { // LBH QVQ VG!
   		  if(unicode<65){
   		  	//get the value passed the 65
   		  	var unicodeLessThan65 = 65 - unicode;
-  		  	//use that value but now coming from 91 to get the character . It's like a loop: The alphabet goes from 65 to 91 on unicode
+  		  	//use that value but now coming from 91 to get the character . It's like a loop: The alphabet goes from 65 to 91 on unicode so if it goes to less than 65 it continues from 91
   		  	var characterLessThan65 = String.fromCharCode(91 - unicodeLessThan65);
   		  	//push inth cypherDeffect string
   		  	cypherDeffect += characterLessThan65;

@@ -1,27 +1,15 @@
 function spinalCase(str) {
 	var regex = /[_\s]/g;
-	var regexUpper = /[_A-Z\s]/g;
-	var brandNewStr = str.replace(regexUpper, '-$&').toLowerCase();
-	if(brandNewStr[0]=="-"){
-      var newNewStr = brandNewStr.substring(1)
-      return newNewStr
-    }
-	return brandNewStr;
-}
-
-spinalCase("Teletubbies say Eh-oh")
-
-
-function spinalCase(str) {
-	var regex = /[_\s]/g;
 	var regexUpper = /[A-Z]/g;
+	var regexDuplicate = /[\s]|(-)\1/gi
 	var brandNewStr = str.replace(regexUpper, '-$&').toLowerCase();
-    var newStr = brandNewStr.replace(regex,'')
+    var newStr = brandNewStr.replace(regex,'-');
+    var noDuplicateStr = newStr.replace(regexDuplicate, '-')
 	if(newStr[0]=="-"){
-      var newNewStr = newStr.substring(1)
-      return newNewStr
+      	var newNewStr = noDuplicateStr.substring(1);
+      	return newNewStr;
     }
-	return newStr;
+	return noDuplicateStr;
 }
 
-spinalCase("Teletubbies say Eh-oh")
+spinalCase("Teletubbies say Eh-oh");

@@ -1,6 +1,5 @@
 function whatIsInAName(collection, source) {
 	var arr = [];
-	// Only change code below this line
 	for(var i = 0; i<collection.length;i++){
 		for (var prop in source) {
             if(collection[i].hasOwnProperty(prop)){
@@ -20,7 +19,6 @@ function whatIsInAName(collection, source) {
         }
 	}
 	return arr;
-	// Only change code above this line
 }
 
 whatIsInAName([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "b": 2 })
